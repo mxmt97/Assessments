@@ -1,0 +1,23 @@
+# Functions_declaration/length_check
+def class_mid(word):
+    length = len(word)
+    
+    if 0 < length < 1000:
+        if length % 2 != 0: 
+            mid = length // 2
+            result = word[mid]
+        else:
+            mid = length // 2
+            result = word[mid - 1:mid + 1]
+    elif length == 1:
+        result = word
+    else:
+        result = "Length is out of limit."
+    
+    return result
+    
+# Main_Program
+
+word1 = input("Hello, enter a word: ")
+result = class_mid(word1)
+print(result)
